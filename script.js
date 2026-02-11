@@ -41,7 +41,31 @@ const productos = [
         precio: 229.900,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/863589/Chaquetas-BEIGE-E076041-3.jpg?v=639002912619170000",
         descripcion: "Chaqueta manga larga tipo biker elaborada en tejido efecto suede poliéster 100% 100.00% poliéster/polyester."
+    },
+    // --------------------------
+    {
+        id: 7,
+        nombre: "Bolso de mano costero",
+        precio: 149.900,
+        imagen: "https://elaco.vtexassets.com/arquivos/ids/876267/Bolsosycarteras-CAMEL-E402682-2.jpg?v=639050594822870000",
+        descripcion: "Bolso de mano costero combinacion de materiales bolso de mano costero"
+    },
+    {
+        id: 8,
+        nombre: "Chaqueta acolchada con estampado",
+        precio: 500.000,
+        imagen: "https://www.versace.com/dw/image/v2/BGWN_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dwe80e6e28/original/90_1022414-1A16815_5Y570_10_PrintedPaddedJacket-Jackets-Versace-online-store_0_1.jpg?sw=850&q=85&strip=true",
+        descripcion: "Una chaqueta acolchada corta con un estampado Barocco, una capucha elástica extraíble con cordón y botones de Medusa decorativos."
+    },
+    {
+        id: 9,
+        nombre: "Zapatillas greca con plataforma",
+        precio: 320.000,
+        imagen: "https://www.versace.com/dw/image/v2/BGWN_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dw33340b2c/original/90_1022346-1A15305_2PS80_22_LaGrecaSuedePlatformSneakers-Sneakers-Versace-online-store_0_2.jpg?sw=850&q=85&strip=true",
+        descripcion: "Zapatillas de caña baja confeccionadas en ante que se caracterizan por un motivo de Greca en el mismo tono bordado en el lateral."
     }
+
+    
 ];
 
 let carrito = [];
@@ -115,7 +139,7 @@ function actualizarCarrito() {
             div.innerHTML = `
                 <div>
                     <h6 class="mb-0">${producto.nombre}</h6>
-                    <small class="text-muted">$${producto.precio.toFixed(2)}</small>
+                    <small class="text-muted">$${producto.precio.toFixed(3)}</small>
                 </div>
                 <button class="btn btn-sm btn-danger" onclick="eliminarDelCarrito(${index})">
                     <i class="fas fa-trash-alt"></i> X
@@ -127,7 +151,7 @@ function actualizarCarrito() {
 
     // Update Total Price
     const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
-    totalPrecio.innerText = total.toFixed(2);
+    totalPrecio.innerText = total.toFixed(3);
 }
 
 // Remove Item from Cart
