@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="libs/styles.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">    
     <title>GlowStore</title>
 </head>
@@ -29,9 +30,9 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Inicio</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="inventario.html">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="inventario.html">Inventario</a></li>
                 </ul>
                 <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
                     data-bs-target="#carritoModal">
@@ -50,13 +51,64 @@
             <div class="text-center text-white">
                 <h1 class="display-4 fw-bolder " style="font-family: 'Itim', cursive;">Brilla con tu propio estilo</h1>
                 <p class="lead fw-normal text-dark text-bold mb-0">La moda que te hace única.</p>
-                <a class="btn btn-outline-light btn-lg mt-4" href="#contenedor-productos">Ver Colección</a>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="row" id="contenedor-productos">
+        <div class="row">
+                <h1>Sistema de Ventas</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Costo</th>
+                        <th>Cantidad</th>
+                        <th>Total Venta</th>
+                        <th>Ganancia</th>
+                        <th>% Ganancia</th>
+                    </tr>
+                </thead>
+                <!-- <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead> -->
+                <tbody id="tabla-productos"></tbody>
+            </table>
+
+            <h3>Descuento (%)</h3>
+            <input type="number" id="descuento" value="0">
+
+            <h3>Promoción</h3>
+            <input type="text" id="promo" placeholder="Ej: 10% en blusas">
+
+            <h3>Total de ventas Final: $<span id="total-final">0</span></h3>
+            <h3>Ganancia Total: $<span id="ganancia-total">0</span></h3>
+
+            <button onclick="registrarVenta()">Registrar Venta</button>
+
+            <hr>
+
+            <h2>Ventas del día</h2>
+            <ul id="ventas-dia"></ul>
+
+            <h2>Gastos</h2>
+            <input type="number" id="gasto-input" placeholder="Ej: 50000">
+            <button onclick="agregarGasto()">Agregar gasto</button>
+            <p>Total gastos: $<span id="total-gastos">0</span></p>
+
+            <h2>Venta a crédito</h2>
+            <input type="number" id="porcentaje-credito" placeholder="Ej: 20">
+            <button onclick="calcularCredito()">Calcular crédito</button>
+            <p>Valor crédito: $<span id="credito"></span></p>
+        
+            
         </div>
     </main>
 
@@ -112,7 +164,9 @@
                     <span class="text-white py-3"> Mariana Valentina Muñoz Castro</span>
                     <br>
                     <span class="text-white py-3"> Charith Yulieth Caicedo Montenegro</span>
+                    <br>
                     <span class="text-white py-3"> Luisa Maria Vallejo Meneses</span>
+                    <br>
                     <span class="text-white py-3"> Katherin Mañunga Lame</span>
                     <p class="text-muted mt-4 small">&copy; 2026 GlowStore. Todos los derechos reservados.</p>
                 </div>
@@ -123,7 +177,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+        <script src="ventas.js"></script>
 </body>
 
-</html>
+</html> 

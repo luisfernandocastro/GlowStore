@@ -4,6 +4,7 @@ const productos = [
         id: 1,
         nombre: "Blusa crop para mujer",
         precio: 139.900,
+        costo: 80.000,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/877353/_AMO9515.jpg?v=639057257476970000",
         descripcion: "Blusa de tiras largo crop elaborada en lentejuelas blusa crop para muje"
     },
@@ -11,6 +12,7 @@ const productos = [
         id: 2,
         nombre: "Blusa tejida manga corta tipo polo",
         precio: 149.900,
+        costo: 130.000,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/832592/BLUSA-NAVY-E174457-3.jpg?v=638920740136400000",
         descripcion: "Blusa manga corta tejida con cuello tipo polo viscosa 65% poliéster 35%"
     },
@@ -18,6 +20,7 @@ const productos = [
         id: 3,
         nombre: "Bolso de mano costero",
         precio: 149.900,
+        costo: 140.000,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/815770/5-MARZO9237.jpg.jpg?v=638882014195100000",
         descripcion: "Bolso de mano costero elaborado en sintético con manijas en contraste y herrajes dorados."
     },
@@ -25,6 +28,7 @@ const productos = [
         id: 4,
         nombre: "Enterizo para mujer manga corta",
         precio: 179.900,
+        costo: 170.000,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/811400/ENTERIZO-MOKA-E123006-2.jpg?v=638917591311030000",
         descripcion: "Enterizo para mujer manga corta elaborado en sintético con manijas en contraste y herrajes dorados."
     },
@@ -32,6 +36,7 @@ const productos = [
         id: 5,
         nombre: "Enterizo short mc para mujer",
         precio: 99.450,
+        costo: 75.000,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/844046/ENTERIZO-VINOTINTO-E123026-1.jpg?v=638961419812830000",
         descripcion: "Elegancia atemporal para cualquier ocasión."
     },
@@ -39,6 +44,7 @@ const productos = [
         id: 6,
         nombre: "Chaqueta biker en suede para mujer",
         precio: 229.900,
+        costo: 210.000,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/863589/Chaquetas-BEIGE-E076041-3.jpg?v=639002912619170000",
         descripcion: "Chaqueta manga larga tipo biker elaborada en tejido efecto suede poliéster 100% 100.00% poliéster/polyester."
     },
@@ -47,6 +53,7 @@ const productos = [
         id: 7,
         nombre: "Bolso de mano costero",
         precio: 149.900,
+        costo: 136.000,
         imagen: "https://elaco.vtexassets.com/arquivos/ids/876267/Bolsosycarteras-CAMEL-E402682-2.jpg?v=639050594822870000",
         descripcion: "Bolso de mano costero combinacion de materiales bolso de mano costero"
     },
@@ -54,6 +61,7 @@ const productos = [
         id: 8,
         nombre: "Chaqueta acolchada con estampado",
         precio: 500.000,
+        costo: 480.000,
         imagen: "https://www.versace.com/dw/image/v2/BGWN_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dwe80e6e28/original/90_1022414-1A16815_5Y570_10_PrintedPaddedJacket-Jackets-Versace-online-store_0_1.jpg?sw=850&q=85&strip=true",
         descripcion: "Una chaqueta acolchada corta con un estampado Barocco, una capucha elástica extraíble con cordón y botones de Medusa decorativos."
     },
@@ -61,6 +69,7 @@ const productos = [
         id: 9,
         nombre: "Zapatillas greca con plataforma",
         precio: 320.000,
+        costo: 300.000,
         imagen: "https://www.versace.com/dw/image/v2/BGWN_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dw33340b2c/original/90_1022346-1A15305_2PS80_22_LaGrecaSuedePlatformSneakers-Sneakers-Versace-online-store_0_2.jpg?sw=850&q=85&strip=true",
         descripcion: "Zapatillas de caña baja confeccionadas en ante que se caracterizan por un motivo de Greca en el mismo tono bordado en el lateral."
     }
