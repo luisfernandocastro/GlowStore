@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">    
+    <title>GlowStore</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #C3C3E6;">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fw-bold" href="#" style="font-family: 'Itim', cursive; font-size: 1.6rem;">
+                <img src="logo.png" alt="GlowStore Logo" width="50" height="50"
+                    class="d-inline-block align-text-top rounded-circle me-2">
+                <span class="align-middle">GLOW STORE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="inventario.html">Inventario</a></li>
+                </ul>
+                <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
+                    data-bs-target="#carritoModal">
+                    <i class="bi-cart-fill me-1"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge bg-danger text-white ms-1 rounded-pill" id="contador-carrito">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header-->
+    <header class="bg-dark py-5"
+        style="background-image: linear-gradient(rgba(195, 195, 230, 1), rgba(0, 0, 0, 0.1)), url('https://elaco.vtexassets.com/assets/vtex.file-manager-graphql/images/94b06efb-9411-430d-9be1-f4e11fd6fd67___4d2be384380740617ce18d94653df409.jpg'); background-size: cover; background-position: top;">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder " style="font-family: 'Itim', cursive;">Brilla con tu propio estilo</h1>
+                <p class="lead fw-normal text-dark text-bold mb-0">La moda que te hace única.</p>
+                <a class="btn btn-outline-light btn-lg mt-4" href="#contenedor-productos">Ver Colección</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row" id="contenedor-productos">
+        </div>
+    </main>
+
+    <div class="modal fade" id="carritoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-monospace">TU COMPRA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="items-carrito">
+                    </div>
+                    <div class="text-end mt-3">
+                        <h4>Total: $<span id="total-precio">0</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="vaciar-carrito">Vaciar</button>
+                    <button class="btn btn-dark">Pagar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container" id="footer">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3" style="font-family: 'Itim', cursive;">GLOW STORE</h5>
+                    <p class="text-secondary">Tu destino número uno para la moda femenina moderna. Brillamos contigo en cada
+                        ocasión.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Categorías</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Vestidos</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Blusas y Tops</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Pantalones y Jeans</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Chaquetas</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Accesorios</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Síguenos</h5>
+                    <div class="mb-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="https://co.pinterest.com/" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+                    </div>
+                    <span class="text-white py-3"> Mariana Valentina Muñoz Castro</span>
+                    <br>
+                    <span class="text-white py-3"> Charith Yulieth Caicedo Montenegro</span>
+                    <span class="text-white py-3"> Luisa Maria Vallejo Meneses</span>
+                    <span class="text-white py-3"> Katherin Mañunga Lame</span>
+                    <p class="text-muted mt-4 small">&copy; 2026 GlowStore. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
